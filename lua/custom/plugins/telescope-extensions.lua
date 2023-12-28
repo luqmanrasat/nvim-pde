@@ -1,3 +1,5 @@
+local telescope = require('telescope')
+
 return {
 	{
 		'nvim-telescope/telescope-ui-select.nvim',
@@ -8,8 +10,9 @@ return {
 				}
 			}
 		},
-		config = function()
-			require('telescope').load_extension('ui-select')
+		config = function(_, opts)
+			telescope.setup(opts)
+			telescope.load_extension('ui-select')
 		end
 	},
 	{
@@ -22,7 +25,7 @@ return {
 			},
 		},
 		config = function()
-			require('telescope').load_extension('undo')
+			telescope.load_extension('undo')
 		end
 	},
 }
