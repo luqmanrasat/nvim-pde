@@ -7,9 +7,11 @@ return {
 		'MunifTanjim/nui.nvim',
 	},
 	opts = {
-		filesystem = { hijack_netrw_behavior = 'open_current' }
+		filesystem = { hijack_netrw_behavior = 'open_default' }
 	},
-	config = function()
+	config = function(_, opts)
+		require('neo-tree').setup(opts)
+
 		require('which-key').register {
 			['<leader>e'] = { name = 'File [E]xplorer', _ = 'which_key_ignore' },
 		}
