@@ -17,6 +17,6 @@ return {
 		}
 
 		vim.keymap.set('n', '<leader>ee', ':Neotree focus<CR>', { desc = 'File [E]xplorer show/focus' })
-		vim.keymap.set('n', '<leader>eq', ':Neotree close<CR>', { desc = 'File [E]xplorer [C]lose' })
+		vim.keymap.set('n', '<leader>ec', ':Neotree close<CR>', { desc = 'File [E]xplorer [C]lose' })
 	end
 }
