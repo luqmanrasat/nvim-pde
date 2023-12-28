@@ -25,4 +25,39 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+-- Window navigation
+vim.keymap.set({ "n", "t" }, "<C-h>", [[<Cmd>wincmd h<CR>]])
+vim.keymap.set({ "n", "t" }, "<C-j>", [[<Cmd>wincmd j<CR>]])
+vim.keymap.set({ "n", "t" }, "<C-k>", [[<Cmd>wincmd k<CR>]])
+vim.keymap.set({ "n", "t" }, "<C-l>", [[<Cmd>wincmd l<CR>]])
+
+-- Move lines
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- page up/down but maintain cursor in the middle
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- search but maintain cursor in the middle
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- paste over highlighed
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- search & replace current word
+vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- clear search
+vim.keymap.set("n", "<C-c>", ":noh<CR>", { silent = true })
+
+--  Uncomment this option if you want your OS clipboard to remain independent.
+-- -- yank to system clipboard
+-- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+-- vim.keymap.set("n", "<leader>Y", [["+Y]])
+--
+-- -- delete to system clipboard
+-- vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+
 -- vim: ts=2 sts=2 sw=2 et
