@@ -22,7 +22,7 @@ return {
 		}
 
 		vim.keymap.set('n', '<S-l>', ':BufferLineCycleNext<CR>', { desc = 'Cycle next buffer' })
-		vim.keymap.set('n', '<s-h>', ':bufferlinecycleprev<cr>', { desc = 'Cycle previous buffer' })
+		vim.keymap.set('n', '<S-h>', ':BufferLineCyclePrev<CR>', { desc = 'Cycle previous buffer' })
 
 		vim.keymap.set('n', '<leader>bh', ':BufferLineMovePrev<CR>', { desc = 'Move to previous buffer' })
 		vim.keymap.set('n', '<leader>bl', ':BufferLineMoveNext<CR>', { desc = 'Move to next buffer' })
