@@ -45,8 +45,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- paste over highlighed
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- search & replace current word
-vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- search & edit current word
+vim.keymap.set("n", "<leader>se", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[S]earch & [E]dit current word' })
 
 -- clear search
 vim.keymap.set("n", "<C-c>", ":noh<CR>", { silent = true })
