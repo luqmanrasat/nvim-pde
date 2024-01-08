@@ -51,6 +51,9 @@ vim.keymap.set("n", "<leader>se", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 -- clear search
 vim.keymap.set("n", "<C-c>", ":noh<CR>", { silent = true })
 
+-- toggle wrap lines
+vim.keymap.set("n", "<leader>tw", ":set wrap!<CR>", { desc = '[T]oggle [W]rap lines' })
+
 --  Uncomment this option if you want your OS clipboard to remain independent.
 -- -- yank to system clipboard
 -- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
